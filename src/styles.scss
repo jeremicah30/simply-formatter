@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #021526;
+    background: #fff;
+    background-image: radial-gradient(rgb(211, 211, 211) 1px, transparent 0);
+    background-size: 20px 20px;
+    background-position: -19px -19px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: initial;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="json-formatter textarea">
+    <div class="grid grid-cols-2 mt-10">
+        <div class="textarea__input flex flex-col items-center gap-y-5">
+            <span class="text-3xl">Input JSON</span>
+
+            <textarea class="rounded-md shadow-lg" name="textarea-input" id="textarea-input"></textarea>
+
+            <div class="textarea__button">
+                <app-button [button_title]="'Convert'" [disabled]="true"></app-button>
+            </div>
+        </div>
+
+        <div class="textarea__result text-center">
+            <h1 class="text-3xl mb-5">Prettified JSON</h1>
+
+            <textarea class="rounded-md shadow-lg" name="textarea-input" id="textarea-input"></textarea>
+        </div>
+    </div>
+</div>

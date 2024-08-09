@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f0e0;
+  height: 60px;
+  padding-inline: 50px;
+
+  &__nav {
+    ul {
+      display: flex;
+      gap: 3rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__item {
+    a {
+      &:hover {
+        cursor: pointer;
+        color: chocolate;
+      }
+    }
+  }
+}

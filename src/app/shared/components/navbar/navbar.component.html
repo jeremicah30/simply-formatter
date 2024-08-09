@@ -1,0 +1,14 @@
+<div class="navbar">
+  <div class="navbar__logo">SIMPLY CONVERTER</div>
+  <nav class="navbar__nav">
+    <ul>
+      @for (item of navbarItems; track item.id) {
+      <li class="navbar__item">
+        <a [routerLink]="item.navLink">{{ item.name }}</a>
+      </li>
+      }@empty {
+      <li>There are no items at the moment.</li>
+      }
+    </ul>
+  </nav>
+</div>
