@@ -1,6 +1,10 @@
 <button
-    class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded"
-    [disabled]="disabled"
+    class="bg-green-500 text-white font-bold py-2 px-4 border-b-4 border-green-700 rounded cursor-pointer"
+    [ngClass]="{
+        'bg-gray-500 border-gray-700 cursor-not-allowed': btn_disabled
+    }"
+    [disabled]="btn_disabled"
+    type="btn_type"
 >
     {{ button_title }}
 </button>

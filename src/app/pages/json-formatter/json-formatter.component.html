@@ -3,17 +3,33 @@
         <div class="textarea__input flex flex-col items-center gap-y-5">
             <span class="text-3xl">Input JSON</span>
 
-            <textarea class="rounded-md shadow-lg" name="textarea-input" id="textarea-input"></textarea>
+            <form [formGroup]="JsonFormGroup" (ngSubmit)="onSubmitBtn()" class="text-center">
+                <textarea
+                    matInput
+                    class="rounded-md shadow-lg"
+                    placeholder="Paste JSON here."
+                    formControlName="jsonInput"
+                ></textarea>
 
-            <div class="textarea__button">
-                <app-button [button_title]="'Convert'" [disabled]="true"></app-button>
-            </div>
+                <div class="textarea__button">
+                    <app-button
+                        [btn_type]="'submit'"
+                        [button_title]="'Convert'"
+                        [btn_disabled]="JsonFormGroup.invalid || !isValueValidJson()"
+                    ></app-button>
+                </div>
+            </form>
         </div>
 
         <div class="textarea__result text-center">
             <h1 class="text-3xl mb-5">Prettified JSON</h1>
 
-            <textarea class="rounded-md shadow-lg" name="textarea-input" id="textarea-input"></textarea>
+            <textarea
+                class="rounded-md shadow-lg"
+                [value]="prettifiedJson"
+                readonly
+                placeholder="Formatted JSON will appear here..."
+            ></textarea>
         </div>
     </div>
 </div>
