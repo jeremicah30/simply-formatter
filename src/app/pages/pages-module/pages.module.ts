@@ -1,16 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-// PAGES COMPONENTS
-import { FontTesterComponent } from '../font-tester/font-tester.component';
-import { JsonFormatterComponent } from '../json-formatter/json-formatter.component';
-
-// SHARED COMPONENTS
-import { ButtonComponent } from '../../shared/components';
+import { ButtonComponent, LayoutComponent, NavbarComponent } from '../../shared/components';
 
 @NgModule({
     declarations: [],
-    imports: [CommonModule, ButtonComponent],
-    exports: [],
+    imports: [CommonModule, ButtonComponent, LayoutComponent, NavbarComponent],
+    exports: [ButtonComponent, LayoutComponent, NavbarComponent],
 })
 export class PagesModule {}
