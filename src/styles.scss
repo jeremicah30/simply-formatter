@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: #021526;
@@ -17,6 +17,15 @@ body {
     background-image: radial-gradient(rgb(211, 211, 211) 1px, transparent 0);
     background-size: 20px 20px;
     background-position: -19px -19px;
+}
+
+textarea {
+    padding: 30px;
+
+    &:active,
+    &:focus {
+        outline: 1px solid #e9b584;
+    }
 }
 
 li {
